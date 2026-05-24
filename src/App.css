@@ -1,0 +1,13 @@
+/* optional global enhancements */
+
+::-webkit-scrollbar {
+  width: 6px;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #4f46e5;
+  border-radius: 10px;
+}
+html {
+  scroll-behavior: smooth;
+}

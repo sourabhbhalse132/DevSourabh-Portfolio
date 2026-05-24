@@ -1,0 +1,368 @@
+/* =========================
+   BASE NAVBAR
+========================= */
+html {
+  scroll-behavior: smooth;
+}
+.navbar {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 50;
+
+  padding: 18px 0;
+  background: transparent;
+
+  transition: all 0.25s ease;
+}
+
+.navbar.scrolled {
+  background: rgba(2, 6, 23, 0.85);
+
+  -webkit-backdrop-filter: blur(12px);
+  backdrop-filter: blur(12px);
+
+  padding: 12px 0;
+}
+
+/* =========================
+   CONTAINER
+========================= */
+.navbar-container {
+  max-width: 1200px;
+  margin: auto;
+  padding: 0 24px;
+
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+/* =========================
+/* =========================
+   LOGO
+========================= */
+.logo {
+  display: flex;
+  align-items: center;
+  font-size: 20px;
+  font-weight: 700;
+  color: white;
+  text-decoration: none;
+
+  position: relative;
+  transition: all 0.35s ease;
+}
+
+/* TEXT PART */
+.logo span {
+  color: #818cf8;
+  font-weight: 400;
+  margin-left: 1px;
+  transition: all 0.35s ease;
+}
+
+/* ICON */
+.logo-icon {
+  margin-left: 0px;
+  color: #818cf8;
+  transition: transform 0.35s ease, color 0.35s ease;
+}
+
+/* HOVER EFFECT */
+.logo:hover {
+  transform: translateY(-2px);
+  filter: drop-shadow(0 0 12px rgba(129, 140, 248, 0.5));
+}
+
+.logo:hover span {
+  color: #a5b4fc;
+}
+
+.logo:hover .logo-icon {
+  transform: rotate(12deg) scale(1.15);
+  color: #a5b4fc;
+}
+
+/* UNDERLINE ANIMATION */
+.logo::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: -4px;
+  width: 0%;
+  height: 2px;
+  background: linear-gradient(to right, #818cf8, transparent);
+  transition: width 0.25s ease;
+}
+
+.logo:hover::after {
+  width: 100%;
+}
+
+/* SUBTLE FLOATING ANIMATION */
+.logo {
+  animation: floatLogo 3s ease-in-out infinite;
+}
+
+@keyframes floatLogo {
+  0% {
+    transform: translateY(0px);
+  }
+  50% {
+    transform: translateY(-2px);
+  }
+  100% {
+    transform: translateY(0px);
+  }
+}
+
+/* =========================
+   RIGHT SIDE
+========================= */
+.right-side {
+  display: flex;
+  align-items: center;
+  gap: 22px;
+}
+
+/* =========================
+   DESKTOP LINKS
+========================= */
+.nav-links {
+  display: flex;
+  gap: 26px;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.nav-links a {
+  position: relative;
+
+  text-decoration: none;
+  color: #cbd5e1;
+
+  font-size: 15px;
+  font-weight: 500;
+
+  letter-spacing: 0.5px;
+
+  transition: 0.25s ease;
+}
+
+/* underline hover */
+.nav-links a::after {
+  content: "";
+  position: absolute;
+  bottom: -5px;
+  left: 0;
+
+  width: 0%;
+  height: 2px;
+
+  background: #6366f1;
+  transition: 0.25s ease;
+}
+
+.nav-links a:hover {
+  color: #6366f1;
+}
+
+.nav-links a:hover::after {
+  width: 100%;
+}
+
+/* ACTIVE LINK */
+.nav-links a.active {
+  color: #a5b4fc;
+  text-shadow: 0 0 12px rgba(99, 102, 241, 0.35);
+}
+
+.nav-links a.active::after {
+  width: 100%;
+}
+
+/* =========================
+   RESUME BUTTON (FIXED)
+========================= */
+.resume-btn {
+  cursor: pointer;
+
+  padding: 8px 14px;
+
+  border: 1px solid #6366f1;
+  border-radius: 8px;
+
+  color: #a5b4fc;
+  background: transparent;
+
+  font-size: 14px;
+
+  transition: 0.25s ease;
+}
+
+.resume-btn:hover {
+  background: #6366f1;
+  color: white;
+  transform: translateY(-2px);
+  box-shadow: 0 10px 25px rgba(99, 102, 241, 0.25);
+}
+
+/* =========================
+   HAMBURGER
+========================= */
+.hamburger {
+  display: none;
+  background: none;
+  border: none;
+  color: white;
+  cursor: pointer;
+}
+
+/* =========================
+   MOBILE SIDEBAR
+========================= */
+.mobile-menu {
+  position: fixed;
+  top: 0;
+  right: 0;
+
+  height: 100vh;
+  width: 290px;
+
+  z-index: 40;
+
+  background: rgba(2, 6, 23, 0.92);
+
+  -webkit-backdrop-filter: blur(18px);
+  backdrop-filter: blur(18px);
+
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+
+  padding: 40px 28px;
+  gap: 14px;
+
+  box-shadow: -10px 0 30px rgba(0, 0, 0, 0.5);
+
+  opacity: 0;
+  transform: translateX(100%);
+  pointer-events: none;
+
+  transition: all 0.28s ease;
+}
+
+/* OPEN STATE */
+.mobile-menu.open {
+  opacity: 1;
+  transform: translateX(0);
+  pointer-events: auto;
+}
+
+/* =========================
+   MOBILE LINKS (PREMIUM UI)
+========================= */
+.mobile-menu a {
+  position: relative;
+
+  width: 100%;
+  padding: 12px 14px;
+
+  font-size: 16px;
+  font-weight: 600;
+
+  color: #cbd5e1;
+  text-decoration: none;
+
+  border-radius: 10px;
+
+  transition: all 0.25s ease;
+}
+
+/* hover */
+.mobile-menu a:hover {
+  color: #a5b4fc;
+  transform: translateX(6px);
+
+  background: rgba(99, 102, 241, 0.08);
+  box-shadow: 0 8px 20px rgba(99, 102, 241, 0.15);
+}
+
+/* ACTIVE MOBILE */
+.mobile-menu a.active-mobile {
+  color: #a5b4fc;
+  background: rgba(99, 102, 241, 0.12);
+  transform: translateX(6px);
+  box-shadow: 0 0 18px rgba(99, 102, 241, 0.25);
+}
+
+/* LEFT INDICATOR BAR */
+.mobile-menu a::before {
+  content: "";
+  position: absolute;
+
+  left: 0;
+  top: 50%;
+  transform: translateY(-50%);
+
+  width: 3px;
+  height: 0%;
+
+  background: #6366f1;
+  border-radius: 10px;
+
+  transition: 0.25s ease;
+}
+
+.mobile-menu a:hover::before,
+.mobile-menu a.active-mobile::before {
+  height: 60%;
+}
+
+/* =========================
+   MOBILE RESUME BUTTON
+========================= */
+.mobile-resume {
+  cursor: pointer;
+
+  margin-top: 10px;
+
+  padding: 10px 14px;
+
+  border: 1px solid #6366f1;
+  border-radius: 8px;
+
+  color: #a5b4fc;
+  background: transparent;
+
+  font-size: 14px;
+
+  transition: 0.25s ease;
+}
+
+.mobile-resume:hover {
+  background: #6366f1;
+  color: white;
+  transform: translateX(6px);
+  box-shadow: 0 10px 25px rgba(99, 102, 241, 0.25);
+}
+
+/* =========================
+   RESPONSIVE
+========================= */
+@media (max-width: 768px) {
+  .nav-links {
+    display: none;
+  }
+
+  .resume-btn {
+    display: none;
+  }
+
+  .hamburger {
+    display: block;
+  }
+}
