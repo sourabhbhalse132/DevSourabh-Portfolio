@@ -18,7 +18,7 @@ const Projects = () => {
         'https://images.unsplash.com/photo-1533174072545-7a4b6ad7a6c3?q=80&w=1170&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D',
       tech: ['React', 'Node.js','Express.js', 'MongoDB', 'Tailwind CSS','JWT','Nodemailer', 'Redux Toolkit'],
       github: 'https://github.com/sourabh433',
-      live: 'https://eventify-ruby.vercel.app/',
+      live: 'https://eventify-phi-six.vercel.app/',
       icon: <Ticket size={18} className="text-indigo-400" />,
     },
     {
