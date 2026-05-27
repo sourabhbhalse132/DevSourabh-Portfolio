@@ -2,9 +2,9 @@ import {
   Github,
   ExternalLink,
   Ticket,
-  ShieldCheck,
   Code2,
   Database,
+  Video,
 } from 'lucide-react';
 
 const Projects = () => {
@@ -22,17 +22,17 @@ const Projects = () => {
       icon: <Ticket size={18} className="text-indigo-400" />,
     },
     {
-      id: 2,
-      title: 'Resume Builder',
-      description:
-        'Dynamic resume builder with live preview and PDF export functionality.',
-      image:
-        'https://images.unsplash.com/photo-1586281380349-632531db7ed4?auto=format&fit=crop&q=80&w=1200',
-      tech: ['React', 'Tailwind', 'Vite'],
-      github: 'https://github.com/your-username/resume-builder',
-      live: 'https://resume-builder.vercel.app',
-      icon: <ShieldCheck size={18} className="text-emerald-400" />,
-    },
+  id: 2,
+  title: 'DoConnect',
+  description:
+    'Real-time video conferencing and chat application enabling seamless live meetings with integrated audio/video communication.',
+  image:
+    'https://images.unsplash.com/photo-1588196749597-9ff075ee6b5b?q=80&w=1074&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D',
+  tech: ['React', 'Node.js','Express.js', 'MongoDB', 'Socket.io', 'WebRTC', 'Tailwind'],
+  github: 'https://github.com/sourabh433/DoConnect',
+  live: 'https://do-connect-alpha.vercel.app', // update if your actual deployed URL is different
+  icon: <Video size={18} className="text-blue-400" />,
+},
     {
       id: 3,
       title: 'MERN Blog Platform',
