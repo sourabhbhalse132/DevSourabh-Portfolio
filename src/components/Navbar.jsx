@@ -55,8 +55,8 @@ const Navbar = () => {
   // Resume download handler
   const downloadResume = () => {
     const a = document.createElement('a');
-    a.href = '/resume.pdf'; // Must be inside the public folder
-    a.download = 'Resume.pdf';
+    a.href = '/SourabhResume.pdf'; // Must be inside the public folder
+    a.download = 'SourabhResume.pdf';
     document.body.appendChild(a);
     a.click();
     document.body.removeChild(a);

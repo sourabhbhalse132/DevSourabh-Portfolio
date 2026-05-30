@@ -82,7 +82,7 @@ const Contact = () => {
   };
 
   const links = [
-    { name: 'GitHub', icon: <Github size={14} />, url: 'https://github.com/sourabh433' },
+    { name: 'GitHub', icon: <Github size={14} />, url: 'https://github.com/sourabhbhalse132' },
     { name: 'LinkedIn', icon: <Linkedin size={14} />, url: 'https://linkedin.com/in/sourabhbhalse132' },
     { name: 'X', icon: <Twitter size={14} />, url: 'https://x.com/Bhalse_sourabh' },
     { name: 'Telegram', icon: <SendHorizonal size={14} />, url: 'https://t.me/sourabh_bhalse' },
